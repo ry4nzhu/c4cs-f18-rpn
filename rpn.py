@@ -1,5 +1,6 @@
 #!/usr/bin/env  python3
 import math
+import operator
 
 def calculate(arg):
     stack = []
@@ -17,8 +18,8 @@ def calculate(arg):
             elif token == '-':
                 result = val2 - val1
             elif token == '^':
-                result = math.pow(val2,val1)
-
+                result = operator.pow(val2,val1)
+#            print(colored('result','green'))
             stack.append(result)
 
     if len(stack) > 1:
